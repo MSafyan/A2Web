@@ -27,7 +27,7 @@ SP18-BSE-143 MUZAMIL RAFIQ -->
         <form class="m-3 form" id="form" onsubmit="event.preventDefault(); formClear();">
           <div class="form-group">
             <label>Name:</label>
-            <input  type="text" name="Name" required id="name" class="form-control" pattern="[A-Za-z]{1,10}" maxlength="10" placeholder="enter your name">
+            <input  onkeydown="return alphaOnly(event);"  type="text" name="Name" required id="name" class="form-control" pattern="[A-Za-z]{1,10}" maxlength="10" placeholder="enter your name">
           </div>
           <div class="form-group">
             <label>Gender:</label>
@@ -80,6 +80,10 @@ SP18-BSE-143 MUZAMIL RAFIQ -->
     </div>
 
    <script type="text/javascript">
+   function alphaOnly(event) {
+      var key = event.keyCode;
+      return ((key >= 65 && key <= 90) || key == 8);
+    };
     // $("form").submit(function(e) {
     //   e.preventDefault();
     //   var name=$("input[name='name']").val();
