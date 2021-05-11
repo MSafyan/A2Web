@@ -1,0 +1,20 @@
+body{
+}
+
+	h1{
+		text-align: center;
+		margin: 50px; 
+		color:white; 
+		background: blue; 
+		width: 55%;
+		padding: 10px;
+		border-radius: 10px;
+	}
+	.data-table tbody tr:nth-child(2) {
+		background:#ddd;
+	}
+
+
+	.cform,.ctable{
+	background-color: #eee;
+	}
